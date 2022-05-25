@@ -1,0 +1,39 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+form {
+    width: max(240px, 60vw);
+    margin: 0 auto;
+}
+
+form > div {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+form fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+form > button {
+    width: max(80px, 20vw);
+    font-size: 1.3em;
+}
+
+fieldset > button {
+    width: 30%;
+    margin: 20px auto 0px;
+    font-size: 2em;
+}
+
+fieldset > label {
+    margin: 10px 0;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/App.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -99,46 +100,52 @@ class App extends React.Component {
     return (
       <div className="App">
         <form>
-          <fieldset>
-            <legend>Contact Info</legend>
-            <label htmlFor="name">Name:</label>
-            <input type="text" name="name" id="name"/>
-            <label htmlFor="email">Email:</label>
-            <input type="email" name="email" id="email"/>
-            <label htmlFor="phone">Phone Number:</label>
-            <input type="tel" name="phone" id="phone"/>
-          </fieldset>
-          <fieldset>
-            <legend>Education</legend>
-            <label htmlFor="schoolName1">Name of Institution:</label>
-            <input type="text" name="schoolName1" id="schoolName1"/>
-            <label htmlFor="fieldOfStudy1">Field of Study:</label>
-            <input type="text" name="fieldOfStudy1" id="fieldOfStudy1"/>
-            <label htmlFor="startSchoolDate1">Start Date:</label>
-            <input type="text" name="startSchoolDate1" id="startSchoolDate1"/>
-            <label htmlFor="endSchoolDate1">endDate:</label>
-            <input type="text" name="endSchoolDate1" id="endSchoolDate1"/>
-            <label htmlFor="commentsOnEducation1">Comments on Experience:</label>
-            <textarea name="commentsOnEducation1" id="commentsOnEducation1"></textarea>
-            <button type="button">+</button>
-          </fieldset>
-          <fieldset>
-            <legend>Work History</legend>
-            <label htmlFor="company">Company:</label>
-            <input type="text" name="employer" id="company"/>
-            <label htmlFor="positionTitle">Position Title:</label>
-            <input type="text" name="positionTitle" id="positionTitle"/>
-            <label htmlFor="startWorkDate1">Start Date:</label>
-            <input type="text" name="startWorkDate1" id="startWorkDate1"/>
-            <label htmlFor="endWorkDate1">endDate:</label>
-            <input type="text" name="endWorkDate1" id="endWorkDate1"/>
-            <label htmlFor="responsibilities">Position Responsibilities:</label>
-            <textarea name="responsibilities" id="responsibilities"></textarea>
-            <button type="button">+</button>
-          </fieldset>
+          <div>
+            <fieldset>
+              <legend>Contact Info</legend>
+              <label htmlFor="name">Name:</label>
+              <input type="text" name="name" id="name"/>
+              <label htmlFor="email">Email:</label>
+              <input type="email" name="email" id="email"/>
+              <label htmlFor="phone">Phone Number:</label>
+              <input type="tel" name="phone" id="phone"/>
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <legend>Education</legend>
+              <label htmlFor="schoolName1">Name of Institution:</label>
+              <input type="text" name="schoolName1" id="schoolName1"/>
+              <label htmlFor="fieldOfStudy1">Field of Study:</label>
+              <input type="text" name="fieldOfStudy1" id="fieldOfStudy1"/>
+              <label htmlFor="startSchoolDate1">Start Date:</label>
+              <input type="text" name="startSchoolDate1" id="startSchoolDate1"/>
+              <label htmlFor="endSchoolDate1">End Date:</label>
+              <input type="text" name="endSchoolDate1" id="endSchoolDate1"/>
+              <label htmlFor="commentsOnEducation1">Comments on Experience:</label>
+              <textarea name="commentsOnEducation1" id="commentsOnEducation1" rows="15"></textarea>
+              <button type="button">+</button>
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <legend>Work History</legend>
+              <label htmlFor="company">Company:</label>
+              <input type="text" name="employer" id="company"/>
+              <label htmlFor="positionTitle">Position Title:</label>
+              <input type="text" name="positionTitle" id="positionTitle"/>
+              <label htmlFor="startWorkDate1">Start Date:</label>
+              <input type="text" name="startWorkDate1" id="startWorkDate1"/>
+              <label htmlFor="endWorkDate1">End Date:</label>
+              <input type="text" name="endWorkDate1" id="endWorkDate1"/>
+              <label htmlFor="responsibilities">Position Responsibilities:</label>
+              <textarea name="responsibilities" id="responsibilities" rows="15"></textarea>
+              <button type="button">+</button>
+            </fieldset>
+          </div>
           <button type="button">Submit</button>
           <button type="button">Edit</button>
-          <button type="reset">Clear All</button>
+          <button type="reset">Clear</button>
         </form>
       </div>
     );
