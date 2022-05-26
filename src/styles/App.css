@@ -18,7 +18,7 @@ form > div {
     background-color: white;
 }
 
-form fieldset {
+fieldset > div {
     display: flex;
     flex-flow: column nowrap;
 }
@@ -34,6 +34,6 @@ fieldset > button {
     font-size: 2em;
 }
 
-fieldset > label {
+label {
     margin: 10px 0;
 }
