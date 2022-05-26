@@ -6,7 +6,7 @@ class Contact extends React.Component {
             <div>
                 <fieldset>
                     <legend>Contact Info</legend>
-                    <div>
+                    <div className="entry">
                         <label htmlFor="name">Name:</label>
                         <input type="text" name="name" id="name"/>
                         <label htmlFor="email">Email:</label>

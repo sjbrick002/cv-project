@@ -107,8 +107,8 @@ class App extends React.Component {
       <div className="App">
         <form>
           <Contact/>
-          <Education/>
-          <Work/>
+          <Education schoolCount={this.state.educationEntriesCount}/>
+          <Work workCount={this.state.workEntriesCount}/>
           <button type="button">Submit</button>
           <button type="button">Edit</button>
           <button type="reset">Clear</button>

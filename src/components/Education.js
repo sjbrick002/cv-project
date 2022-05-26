@@ -1,18 +1,31 @@
 import React from "react";
 
-function School() {
+function School(i) {
+    return (
+        <div className="entry" id={`school-${i}`}>
+            <label htmlFor={`schoolName-${i}`}>Name of Institution:</label>
+            <input type="text" id={`schoolName-${i}`}/>
+            <label htmlFor={`fieldOfStudy-${i}`}>Field of Study:</label>
+            <input type="text" id={`fieldOfStudy-${i}`}/>
+            <label htmlFor={`startSchoolDate-${i}`}>Start Date:</label>
+            <input type="text" id={`startSchoolDate-${i}`}/>
+            <label htmlFor={`endSchoolDate-${i}`}>End Date:</label>
+            <input type="text" id={`endSchoolDate-${i}`}/>
+            <label htmlFor={`commentsOnEducation-${i}`}>Comments on Experience:</label>
+            <textarea id={`commentsOnEducation-${i}`} rows="15"></textarea>
+        </div>
+    );
+};
+
+function SchoolList(props) {
+    let schoolEntries = [];
+    for (let i = 0; i < props.schoolCount; i++) {
+        schoolEntries.push(School(i));
+    };
+    let schoolList = schoolEntries.map(school => <div key={school.id}>{school}</div>);
     return (
         <div>
-            <label htmlFor="schoolName1">Name of Institution:</label>
-            <input type="text" name="schoolName1" id="schoolName1"/>
-            <label htmlFor="fieldOfStudy1">Field of Study:</label>
-            <input type="text" name="fieldOfStudy1" id="fieldOfStudy1"/>
-            <label htmlFor="startSchoolDate1">Start Date:</label>
-            <input type="text" name="startSchoolDate1"    id="startSchoolDate1"/>
-            <label htmlFor="endSchoolDate1">End Date:</label>
-            <input type="text" name="endSchoolDate1"  id="endSchoolDate1"/>
-            <label htmlFor="commentsOnEducation1">Comments on     Experience:</label>
-            <textarea name="commentsOnEducation1"     id="commentsOnEducation1" rows="15"></textarea>
+            {schoolList}
         </div>
     );
 };
@@ -23,7 +36,7 @@ class Education extends React.Component {
             <div>
                 <fieldset>
                     <legend>Education</legend>
-                    <School/>
+                    <SchoolList schoolCount={this.props.schoolCount}/>
                     <button type="button">+</button>
                 </fieldset>
           </div>
