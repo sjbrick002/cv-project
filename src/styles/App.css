@@ -23,6 +23,11 @@ form > div {
     flex-flow: column nowrap;
 }
 
+.button-set > button {
+    width: 80px;
+    height: 40px;
+}
+
 form > button {
     width: max(80px, 20vw);
     font-size: 1.3em;
@@ -32,6 +37,10 @@ fieldset > button {
     width: 30%;
     margin: 20px auto 0px;
     font-size: 2em;
+}
+
+fieldset > div > div {
+    margin-bottom: 100px;
 }
 
 label {

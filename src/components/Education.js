@@ -32,12 +32,21 @@ function SchoolList(props) {
 
 class Education extends React.Component {
     render() {
+        let buttonSet;
+        if (this.props.schoolCount > 1) {
+            buttonSet = <div className="button-set">
+                <button type="button" onClick={this.props.addEntry}>Add</button>
+                <button type="button" onClick={this.props.removeEntry}>Remove</button>
+                </div>
+        } else {
+            buttonSet = <div className="button-set"><button type="button" onClick={this.props.addEntry}>Add</button></div>
+        };
         return (
             <div>
                 <fieldset>
                     <legend>Education</legend>
                     <SchoolList schoolCount={this.props.schoolCount}/>
-                    <button type="button">+</button>
+                    {buttonSet}
                 </fieldset>
           </div>
         );
