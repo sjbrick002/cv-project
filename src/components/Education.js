@@ -8,9 +8,9 @@ function School(i) {
             <label htmlFor={`fieldOfStudy-${i}`}>Field of Study:</label>
             <input type="text" id={`fieldOfStudy-${i}`}/>
             <label htmlFor={`startSchoolDate-${i}`}>Start Date:</label>
-            <input type="text" id={`startSchoolDate-${i}`}/>
+            <input type="date" id={`startSchoolDate-${i}`}/>
             <label htmlFor={`endSchoolDate-${i}`}>End Date:</label>
-            <input type="text" id={`endSchoolDate-${i}`}/>
+            <input type="date" id={`endSchoolDate-${i}`}/>
             <label htmlFor={`commentsOnEducation-${i}`}>Comments on Experience:</label>
             <textarea id={`commentsOnEducation-${i}`} rows="15"></textarea>
         </div>

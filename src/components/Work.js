@@ -8,9 +8,9 @@ function Job(i) {
             <label htmlFor={`positionTitle-${i}`}>Position Title:</label>
             <input type="text" name="positionTitle" id={`positionTitle-${i}`}/>
             <label htmlFor={`startWorkDate-${i}`}>Start Date:</label>
-            <input type="text" name="startWorkDate" id={`startWorkDate-${i}`}/>
+            <input type="date" name="startWorkDate" id={`startWorkDate-${i}`}/>
             <label htmlFor={`endWorkDate-${i}`}>End Date:</label>
-            <input type="text" name="endWorkDate" id={`endWorkDate-${i}`}/>
+            <input type="date" name="endWorkDate" id={`endWorkDate-${i}`}/>
             <label htmlFor={`responsibilities-${i}`}>Position      Responsibilities:</label>
             <textarea name="responsibilities" id={`responsibilities-${i}`} rows="15"></textarea>
         </div>
