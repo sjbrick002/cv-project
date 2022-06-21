@@ -30,27 +30,48 @@ function SchoolList(props) {
     );
 };
 
-class Education extends React.Component {
-    render() {
-        let buttonSet;
-        if (this.props.schoolCount > 1) {
-            buttonSet = <div className="button-set">
-                <button type="button" onClick={this.props.addEntry}>Add</button>
-                <button type="button" onClick={this.props.removeEntry}>Remove</button>
-                </div>
-        } else {
-            buttonSet = <div className="button-set"><button type="button" onClick={this.props.addEntry}>Add</button></div>
-        };
-        return (
-            <div>
-                <fieldset>
-                    <legend>Education</legend>
-                    <SchoolList schoolCount={this.props.schoolCount}/>
-                    {buttonSet}
-                </fieldset>
-          </div>
-        );
+function Education(props) {
+    let buttonSet;
+    if (props.schoolCount > 1) {
+        buttonSet = <div className="button-set">
+            <button type="button" onClick={props.addEntry}>Add</button>
+            <button type="button" onClick={props.removeEntry}>Remove</button>
+            </div>
+    } else {
+        buttonSet = <div className="button-set"><button type="button" onClick={props.addEntry}>Add</button></div>
     };
+    return (
+        <div>
+            <fieldset>
+                <legend>Education</legend>
+                <SchoolList schoolCount={props.schoolCount}/>
+                {buttonSet}
+            </fieldset>
+      </div>
+    );
 };
+
+//class Education extends React.Component {
+//    render() {
+//        let buttonSet;
+//        if (this.props.schoolCount > 1) {
+//            buttonSet = <div className="button-set">
+//                <button type="button" onClick={this.props.addEntry}>Add</button>
+//                <button type="button" onClick={this.props.removeEntry}>Remove</button>
+//                </div>
+//        } else {
+//            buttonSet = <div className="button-set"><button type="button" onClick={this.props.addEntry}>Add</button></div>
+//        };
+//        return (
+//            <div>
+//                <fieldset>
+//                    <legend>Education</legend>
+//                    <SchoolList schoolCount={this.props.schoolCount}/>
+//                    {buttonSet}
+//                </fieldset>
+//          </div>
+//        );
+//    };
+//};
 
 export default Education;

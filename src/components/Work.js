@@ -30,27 +30,48 @@ function JobList(props) {
     );
 };
 
-class Work extends React.Component {
-    render() {
-        let buttonSet;
-        if (this.props.workCount > 1) {
-            buttonSet = <div  className="button-set">
-                <button type="button" onClick={this.props.addEntry}>Add</button>
-                <button type="button" onClick={this.props.removeEntry}>Remove</button>
-                </div>
-        } else {
-            buttonSet = <div  className="button-set"><button type="button" onClick={this.props.addEntry}>Add</button></div>
-        };
-        return (
-            <div>
-                <fieldset>
-                    <legend>Work History</legend>
-                    <JobList workCount={this.props.workCount}/>
-                    {buttonSet}
-                </fieldset>
-          </div>
-        );
+function Work(props) {
+    let buttonSet;
+    if (props.workCount > 1) {
+        buttonSet = <div  className="button-set">
+            <button type="button" onClick={props.addEntry}>Add</button>
+            <button type="button" onClick={props.removeEntry}>Remove</button>
+            </div>
+    } else {
+        buttonSet = <div  className="button-set"><button type="button" onClick={props.addEntry}>Add</button></div>
     };
-}
+    return (
+        <div>
+            <fieldset>
+                <legend>Work History</legend>
+                <JobList workCount={props.workCount}/>
+                {buttonSet}
+            </fieldset>
+      </div>
+    );
+};
+
+//class Work extends React.Component {
+//    render() {
+//        let buttonSet;
+//        if (this.props.workCount > 1) {
+//            buttonSet = <div  className="button-set">
+//                <button type="button" onClick={this.props.addEntry}>Add</button>
+//                <button type="button" onClick={this.props.removeEntry}>Remove</button>
+//                </div>
+//        } else {
+//            buttonSet = <div  className="button-set"><button type="button" onClick={this.props.addEntry}>Add</button></div>
+//        };
+//        return (
+//            <div>
+//                <fieldset>
+//                    <legend>Work History</legend>
+//                    <JobList workCount={this.props.workCount}/>
+//                    {buttonSet}
+//                </fieldset>
+//          </div>
+//        );
+//    };
+//}
 
 export default Work;
